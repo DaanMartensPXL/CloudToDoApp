@@ -2,7 +2,7 @@ const express = require('express');
 const carrouselRouter = express.Router();
 const { S3Client, ListObjectsV2Command } = require('@aws-sdk/client-s3');
 
-const bucketName = 'your-s3-bucket-name';
+const bucketName = process.env.S3_BUCKET_NAME || 'default-bucket-name';
 
 async function getS3ObjectUrls() {
   const client = new S3Client({}); // Voeg eventueel je AWS-regio toe: { region: "us-west-2" }
