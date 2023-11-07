@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-
+AWS.config.update({region: process.env.AWS_REGION});
 /*
 # These settings can be used if no propper IAM roles are set up or when running locally
 AWS.config.update({accessKeyId: process.env.AWS_ACCESS_KEY_ID});
