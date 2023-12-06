@@ -12,14 +12,15 @@ const app = express();
 const db = require('./aws');
 
 const PORT = process.env.PORT || 3000;
+const API_PATH = process.env.API_PATH || 'default/api';
 
 app.use(cors());
 app.use(express.json());
 
 
-app.use('/health', healthRoutes);
-app.use('/todo', todoRoutes);
-app.use('/carrousel', carrouselRoutes)
+app.use(API_PATH + '/health', healthRoutes);
+app.use(API_PATH + '/todo', todoRoutes);
+app.use(API_PATH + '/carrousel', carrouselRoutes)
 
 
 app.listen(PORT, () => {
