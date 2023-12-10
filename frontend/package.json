@@ -20,7 +20,7 @@
     "@angular/router": "^13.2.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
-    "zone.js": "^0.11.5"
+    "zone.js": "^0.11.5",
     "@datadog/browser-rum": "^5.4.0",
   },
   "devDependencies": {
