@@ -33,7 +33,7 @@ export const handler = async(event) => {
                     _id: {S: randomUUID()},
                     title: {S: item.title},
                     label: {S: item.label},
-                    completed: {BOOL: item.completed}
+                    completed: {BOOL: item.completed ?? false}
                 }
               }
     
